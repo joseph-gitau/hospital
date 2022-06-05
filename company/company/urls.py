@@ -29,6 +29,8 @@ urlpatterns = [
     path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),  # display contact page
     path('accounts/', include('accounts.urls'), name='accounts'),  # display Sign up page
     path('', include('employee.urls')),  # displays all employee app pages
+    # (r'^messages/', include('django_messages.urls')),
+    path('chat/', include('chat.urls'))
 ]
 
 if settings.DEBUG:
